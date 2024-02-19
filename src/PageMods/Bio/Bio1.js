@@ -6,13 +6,13 @@ function Bio1() {
   return (
     <div style={{ 
         backgroundImage: `url(${coverImage})`, 
-        height: '150vh',
+        height: '110vh',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         display: 'flex'
         }}>
         `
-        <div style={{ height: '500px', backgroundColor: 'white', width: '75vw', marginTop: '10vh', alignItems: 'center', display: 'flex', borderRadius: '20px'  }}>
+        <div style={{ maxHeight: '800px', backgroundColor: 'white', width: '75vw', marginTop: '10vh', alignItems: 'center', display: 'flex', borderRadius: '20px'  }}>
         <div style={{ textAlign: 'left', padding: '0 5vw' }}>
             <p style={{ marginBottom: '0', fontSize: '30px', fontWeight: 'bold' }}>
             A Simplified Process
