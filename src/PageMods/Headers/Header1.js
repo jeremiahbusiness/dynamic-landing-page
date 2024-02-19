@@ -5,7 +5,7 @@ function Header1() {
   return (
     <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '100vw', }}>
         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', padding: '10px' }}>
-            <img src={logo} className='App-logo' style={{ maxWidth: "75px", position: 'relative' }} alt="logo" />
+            <img src={logo} className='App-logo' style={{ padding: '0 20px', maxWidth: "50px", position: 'relative' }} alt="logo" />
             <div style={{ position: 'relative' }}>
                 <p style={{ fontSize: '1.5em' }}>
                 Watchdog Workshop

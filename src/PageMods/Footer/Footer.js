@@ -8,7 +8,7 @@ function Footer1() {
            
 
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '10px' }}>
-                    <img src={logo} className='App-logo' style={{ maxWidth: "75px", position: 'relative' }} alt="logo" />
+                    <img src={logo} style={{ maxWidth: "50px", position: 'relative', padding: '0 20px'}} alt="logo" />
                     <div style={{ position: 'relative' }}>
                         <p style={{ fontSize: '1.5em' }}>
                         Watchdog Workshop

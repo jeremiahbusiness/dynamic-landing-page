@@ -3,7 +3,7 @@ import questionMark from '../../Icons/questionMark.png';
 
 function WhyUs1() {
   return (
-    <div style={{ padding: '50px', backgroundColor: '#3c3537', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'  }}>
+    <div style={{ padding: '50px', backgroundColor: '#2e2d2d', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'  }}>
     <img src={questionMark} style={{ width: '100px', margin: '20px auto' }} />
     <div style={{ textAlign: 'center', color: 'white' }}>
       <p style={{ marginTop: '0', fontSize: '30px' }}>

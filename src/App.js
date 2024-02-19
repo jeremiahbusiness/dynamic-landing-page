@@ -9,7 +9,7 @@ import Bio1 from './PageMods/Bio/Bio1';
 function App() {
 
   return (
-    <div className="App">
+    <div className="App" style={{ fontFamily: 'andale mono' }}>
       <Header1 />
       <Bio1 />
       <Service1 />
