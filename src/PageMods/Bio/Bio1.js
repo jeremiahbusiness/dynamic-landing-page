@@ -25,6 +25,8 @@ function Bio1() {
             </p>
             
             <button
+            onClick={() => window.location.href = 'tel:' + process.env.REACT_APP_API_ENDPOINT}
+
             style={{ 
                 width: '150px',
                 padding: '20px',

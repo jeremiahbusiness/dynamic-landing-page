@@ -14,6 +14,7 @@ function Header1() {
         </div>
         <div style={{ padding: '20px'  }}>
             <button
+            onClick={() => window.location.href = 'tel:' + process.env.REACT_APP_API_ENDPOINT}
             style={{ 
                 width: '125px',
                 padding: '20px',

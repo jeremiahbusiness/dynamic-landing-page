@@ -21,7 +21,7 @@ function Footer1() {
 
             <div style={{ padding: '10px'  }}>
                 <button
-                onClick={() => window.location.href = 'tel:+'}
+                onClick={() => window.location.href = 'tel:' + process.env.REACT_APP_API_ENDPOINT}
                 style={{ 
                     width: '125px',
                     padding: '20px',
