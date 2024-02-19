@@ -1,0 +1,25 @@
+/* Default styles */
+.service {
+    /* Your default styles here */
+    padding: 75px 0;
+    color: #3c3537;
+    display: flex;
+    text-align: center;
+  }
+  
+  /* Media query for viewport width less than or equal to 768px */
+  @media (max-width: 768px) {
+    .serviceContainer {
+        flex-direction: column;
+    }
+  }
+  /* Media query for viewport width greater than 1024px */
+  @media (min-width: 1025px) {
+    .service {
+        width: 33vw;
+        margin: auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+  }
