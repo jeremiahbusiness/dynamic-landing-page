@@ -6,13 +6,13 @@ function Bio1() {
   return (
     <div style={{ 
         backgroundImage: `url(${coverImage})`, 
-        height: '80vh',
+        height: '150vh',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         display: 'flex'
         }}>
         `
-        <div style={{ backgroundColor: 'white', height: '60vh', width: '75vw', marginTop: '10vh', alignItems: 'center', display: 'flex', borderRadius: '20px'  }}>
+        <div style={{ height: '500px', backgroundColor: 'white', width: '75vw', marginTop: '10vh', alignItems: 'center', display: 'flex', borderRadius: '20px'  }}>
         <div style={{ textAlign: 'left', padding: '0 5vw' }}>
             <p style={{ marginBottom: '0', fontSize: '30px', fontWeight: 'bold' }}>
             A Simplified Process
@@ -25,7 +25,7 @@ function Bio1() {
             </p>
             
             <button
-            onClick={() => window.location.href = 'tel:' + process.env.REACT_APP_API_ENDPOINT}
+                onClick={() => window.location.href = 'tel:' + process.env.REACT_APP_API_ENDPOINT}
 
             style={{ 
                 width: '150px',
@@ -36,7 +36,7 @@ function Bio1() {
                 background:'#943434', 
                 color: 'white',
                 fontWeight: 'normal',
-                marginTop: '50px',
+                marginTop: '20px',
             }}
             >
                 Get Started

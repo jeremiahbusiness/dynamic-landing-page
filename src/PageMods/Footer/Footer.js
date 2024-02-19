@@ -40,8 +40,9 @@ function Footer1() {
     </div>
     <div>
     <p style={{ padding: '0', fontSize: '1em', textAlign: 'center' }}>
-                Copyright © 2024<br />
-                Boston Capital Company<br />
+                Copyright © 2024<br /><br />
+                Brought to you through<br />
+                Jeremiah Business Solutions<br />
                 All rights Reserved
                     </p>
     </div>
