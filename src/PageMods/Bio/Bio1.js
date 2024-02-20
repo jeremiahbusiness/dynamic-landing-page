@@ -15,13 +15,13 @@ function Bio1() {
         <div style={{ maxHeight: '650px', backgroundColor: 'white', width: '75vw', marginTop: '20px', alignItems: 'center', display: 'flex', borderRadius: '20px'  }}>
         <div style={{ textAlign: 'left', padding: '0 5vw' }}>
             <p style={{ marginBottom: '0', fontSize: '30px', fontWeight: 'bold' }}>
-            A Simplified Process
+                A Simplified Process
             </p>
             <p style={{ marginTop: '0',  fontSize: '27.5px' }}>
-            For Your Convenience
+                For Your Convenience
             </p>
             <p style={{ fontSize: '20px' }}>
-            Get your device repaired today! We specialize in returning malfunctioning electronic devices to their original working condition. Whether it's a smartphone, tablet, laptop, or any other electronic device, our team of experts is equipped with the skills and tools to diagnose and fix the issue. Trust us to breathe new life into your gadgets. Contact us now to get started!
+                Get your device repaired today! We specialize in returning malfunctioning electronic devices to their original working condition. Whether it's a smartphone, tablet, laptop, or any other electronic device, our team of experts is equipped with the skills and tools to diagnose and fix the issue. Trust us to breathe new life into your gadgets. Contact us now to get started!
             </p>
             
             <button
