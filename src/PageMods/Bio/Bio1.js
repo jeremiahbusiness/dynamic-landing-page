@@ -2,7 +2,7 @@
 
 import coverImage from '../../coverImage.jpeg'
 
-function Bio1() {
+function Bio1({ modInfo }) {
   return (
     <div style={{ 
         backgroundImage: `url(${coverImage})`, 
@@ -21,11 +21,11 @@ function Bio1() {
                 For Your Convenience
             </p>
             <p style={{ fontSize: '20px' }}>
-                Get your device repaired today! We specialize in returning malfunctioning electronic devices to their original working condition. Whether it's a smartphone, tablet, laptop, or any other electronic device, our team of experts is equipped with the skills and tools to diagnose and fix the issue. Trust us to breathe new life into your gadgets. Contact us now to get started!
+                {modInfo.intro}
             </p>
             
             <button
-                onClick={() => window.location.href = 'tel:' + process.env.REACT_APP_API_ENDPOINT}
+                onClick={() => window.location.href = 'tel:' + modInfo.phoneNumber}
 
             style={{ 
                 width: '150px',
@@ -33,7 +33,7 @@ function Bio1() {
                 borderRadius: '15px',
                 border: '0',
                 fontSize: '20px',
-                background:'#943434', 
+                background: modInfo.colors.primary, 
                 color: 'white',
                 fontWeight: 'normal',
                 marginTop: '20px',

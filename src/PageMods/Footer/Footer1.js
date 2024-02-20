@@ -1,17 +1,17 @@
 import logo from '../../logo.png';
 
 
-function Footer1() {
+function Footer1({ modInfo }) {
   return (
     <footer style={{  maxWidth: '100vw', padding: '10px', }}>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
            
 
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '10px' }}>
-                    <img src={logo} style={{ maxWidth: "50px", position: 'relative', padding: '0 20px'}} alt="logo" />
+                    <img src={logo} style={{ maxWidth: "75px", position: 'relative', padding: '0 20px'}} alt="logo" />
                     <div style={{ position: 'relative' }}>
                         <p style={{ fontSize: '1.5em' }}>
-                        Watchdog Workshop
+                        {modInfo.title}
                         </p>
                         
                     </div>
@@ -28,7 +28,7 @@ function Footer1() {
                     borderRadius: '15px',
                     border: '0',
                     fontSize: '1.25em',
-                    background:'#943434', 
+                    background: modInfo.colors.primary, 
                     color: 'white',
                     fontWeight: 'normal'
                 }}
