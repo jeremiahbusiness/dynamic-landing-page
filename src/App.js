@@ -20,7 +20,8 @@ function App() {
     // Asynchronous function to load mod data from the database
     const loadDBMods = async () => {
       // Identify Domain Prefix
-      let domainPrefix = 'watchdogtechshop';
+      let domainPrefix = 'donewithdust';
+      
         const hostname = window.location.hostname;
         // Split hostname into parts
         const parts = hostname.split('.');
