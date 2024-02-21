@@ -14,7 +14,7 @@ function Service1({ modInfo }) {
               >
                 
                     
-                <div>
+                <div display >
                     <img src={value.icon} style={{ width: '100px', margin: '20px auto' }} /> 
 
                 </div>

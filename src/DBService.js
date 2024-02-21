@@ -25,7 +25,7 @@ async function makeApiRequest(requestType, url, data = null) {
  * @returns {Promise<Object>} The fetched mod data.
  */
 export const fetchDBMods = (modTable) => {
-  return makeApiRequest('get', `${API_URL}/${modTable}`);
+  return makeApiRequest('post', `${API_URL}/${modTable}`, {'username': 'frogman'});
 };
 
 /**
