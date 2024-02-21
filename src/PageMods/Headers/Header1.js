@@ -7,7 +7,7 @@ function Header1({ modInfo }) {
         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', padding: '10px' }}>
             <img src={logo} className='App-logo' style={{ padding: '0', maxWidth: "6em", position: 'relative' }} alt="logo" />
             <div style={{ position: 'relative' }}>
-                <p style={{ fontSize: '1.75em', textAlign: 'center', fontWeight: '500' }}>
+                <p style={{ fontSize: '1.75em', textAlign: 'center', fontWeight: '500', lineHeight: '1em' }}>
                 {modInfo.title}
                 </p>
             </div>

@@ -1,49 +1,63 @@
 
 
 import coverImage from '../../coverImage.jpeg'
+import "./Bio1.css";
 
 function Bio1({ modInfo }) {
   return (
-    <div style={{ 
-        backgroundImage: `url(${coverImage})`, 
-        height: '110vh',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        display: 'flex'
-        }}>
-        `
-        <div style={{ maxHeight: '650px', backgroundColor: 'white', width: '75vw', marginTop: '20px', alignItems: 'center', display: 'flex', borderRadius: '20px'  }}>
-        <div style={{ textAlign: 'left', padding: '0 5vw' }}>
-            <p style={{ marginBottom: '0', fontSize: '30px', fontWeight: 'bold' }}>
+    <section
+    className="relative"
+    style={{ backgroundImage: `url(${coverImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    color: 'white'
+ }}
+  >
+
+  
+    <div
+      className="relative mx-auto  px-4 py-32 sm:px-6 lg:flex lg:items-center "
+    >
+      <div className="max-w-xl text-center">
+        
+        
+        
+      
+  
+        <div className="mt-8 flex flex-wrap gap-4 text-center" style={{ backgroundColor: modInfo.colors.primary, padding: '30px', borderRadius: '1.5em', border: '2px solid white' }}>
+                <div>
+                <p style={{ marginBottom: '10', fontSize: '45px', fontWeight: 'bold', lineHeight: '35px', letterSpacing: '1.5px' }}>
                 A Simplified Process
             </p>
-            <p style={{ marginTop: '0',  fontSize: '27.5px' }}>
+            <p style={{ marginTop: '0',  fontSize: '30px', color: modInfo.colors.secondary, fontWeight: 'bold' }}>
                 For Your Convenience
             </p>
-            <p style={{ fontSize: '20px' }}>
+            <p style={{ fontSize: '20px', padding: '20px 0' }}>
                 {modInfo.intro}
             </p>
-            
+                </div>
             <button
-                onClick={() => window.location.href = 'tel:' + modInfo.phoneNumber}
-
+            onClick={() => window.location.href = 'tel:' + modInfo.phoneNumber}
             style={{ 
-                width: '150px',
-                padding: '20px',
+                width: '100%',
+                
+                padding: '1em',
                 borderRadius: '15px',
                 border: '0',
-                fontSize: '20px',
-                background: modInfo.colors.primary, 
-                color: 'white',
-                fontWeight: 'normal',
-                marginTop: '20px',
+                fontSize: '1em',
+                background: modInfo.colors.secondary, 
+                color: 'black',
+                fontWeight: 'normal'
             }}
             >
-                Get Started
+                Call Now
             </button>
         </div>
-        </div>
+      </div>
     </div>
+ 
+  </section>
   );
 }
 

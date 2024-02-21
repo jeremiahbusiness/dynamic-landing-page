@@ -20,7 +20,7 @@ function App() {
     // Asynchronous function to load mod data from the database
     const loadDBMods = async () => {
       // Identify Domain Prefix
-      let domainPrefix = 'donewithdust';
+      let domainPrefix = 'topnotchscooters';
       
         const hostname = window.location.hostname;
         // Split hostname into parts
@@ -42,6 +42,7 @@ function App() {
         const dbmodData = await fetchDBMods(process.env.REACT_APP_PROJECT_MODTYPE);
         const project = dbmodData.find(project => project.name === domainPrefix);
         // Update state with the filtered project data
+        console.log(JSON.stringify(project));
         setDBMod(project);
       } catch (error) {
         // Log any errors encountered during the fetch operation
