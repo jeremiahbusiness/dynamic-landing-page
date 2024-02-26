@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 // Importing page-specific components for structured layout
+import Header2 from './PageMods/Headers/Header2';
 import Header1 from './PageMods/Headers/Header1';
 import Bio1 from './PageMods/Bio/Bio1';
 import Service1 from './PageMods/Services/Service1';
 import WhyUs1 from './PageMods/WhyUs/WhyUs1';
 import Footer1 from './PageMods/Footer/Footer1';
 // Importing a function to fetch data from the database
-import { fetchDBMods } from './DBService';
+import { fetchMods } from './DBService';
 // Material UI component for displaying a loading indicator
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -20,18 +21,28 @@ function App() {
     // Asynchronous function to load mod data from the database
     const loadDBMods = async () => {
       // Identify Domain Prefix
-      let domainPrefix = 'topnotchscooters';
+      let domainPrefix = 'watchdogtechshop';
       
-        const hostname = window.location.hostname;
-        // Split hostname into parts
-        const parts = hostname.split('.');
-        
-        // Assuming a standard domain format like 'subdomain.domain.tld'
-        // Adjust the logic below if your domain structure is different
-        if(parts.length > 2) {
-          // Remove the TLD and domain name to get the subdomain
-          domainPrefix = parts.slice(0, -2).join('.');
-        }
+//      const hostname = window.location.hostname;
+//      // Split hostname into parts
+//      const parts = hostname.split('.');
+//      
+//      // Assuming a standard domain format like 'subdomain.domain.tld'
+//      // Adjust the logic below if your domain structure is different
+//      if(parts.length > 2) {
+//        // Remove the TLD and domain name to get the subdomain
+//        domainPrefix = parts.slice(0, -2).join('.');
+//      }
+
+        var fullUrl = window.location.href;
+
+        // Parse the URL using the URL constructor
+        var url = new URL(fullUrl);
+
+        // Get the path part of the URL (after the slash)
+        if(url.pathname === undefined) domainPrefix = url.pathname;
+
+        console.log(domainPrefix);
       
       
     
@@ -39,8 +50,8 @@ function App() {
         // Indicate that loading has started
         setIsLoading(true);
         // Fetch mod data and filter for a specific project
-        const dbmodData = await fetchDBMods(process.env.REACT_APP_PROJECT_MODTYPE);
-        const project = dbmodData.find(project => project.name === domainPrefix);
+        const dbmodData = await fetchMods(process.env.REACT_APP_PROJECT_MODTYPE);
+        const project = dbmodData.find(project => project.slug === domainPrefix);
         // Update state with the filtered project data
         console.log(JSON.stringify(project));
         setDBMod(project);
@@ -72,13 +83,13 @@ function App() {
         </div>
       ) : (
         // Render the main app content once data is loaded
-        <>
+        <div>
           <Header1 modInfo={dbMod} />
           <Bio1 modInfo={dbMod} />
           <Service1 modInfo={dbMod} />
           <WhyUs1 modInfo={dbMod} />
           <Footer1 modInfo={dbMod} />
-        </>
+        </div>
       )}
     </div>
   );

@@ -4,7 +4,7 @@ function Service1({ modInfo }) {
     let services = modInfo.services;
 
   return (
-    <div className='serviceContainer' style={{ maxWidth: '100vw', display: 'flex', padding: '2.5em' }}>
+    <div id='services' className='serviceContainer' style={{ maxWidth: '100vw', display: 'flex', padding: '2.5em' }}>
         {
           Object.entries(services).map(([key, value]) => {
             return (
@@ -15,7 +15,7 @@ function Service1({ modInfo }) {
               >
                 
                   <div style={{ fontSize: '30px',  fontWeight: '600', margin: '0', width: '100%' }}>
-                        {key}
+                        {value.title}
                     </div>
                   
                 
